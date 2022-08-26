@@ -1,0 +1,108 @@
+/*Profile*/
+
+.profile-container {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terminal-container {
+    max-width: 800px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.terminal-header {
+    padding: 5px 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border-radius: 10px 10px 0 0;
+    background-color: #197254;
+    margin-top: -60px;
+}
+
+#terminal-title {
+    font-weight: 800;
+    color: #141414;
+    letter-spacing: 0.1em;
+}
+
+.right-side-buttons i {
+    color: #141414;
+}
+
+.right-side-buttons i:not(:last-child) {
+    margin-right: 10px;
+}
+
+.terminal-window {
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    text-align: left;
+    border: 2px solid #197254;
+    margin-bottom: 50px;
+}
+
+.terminal-window div,
+.terminal-window div p {
+    font-family: 'Nunito', monospace;
+    letter-spacing: 0.1em;
+}
+
+.terminal-window div:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.terminal-window div p {
+    margin-bottom: 0.5em;
+}
+
+.input::before {
+    content: ">\A0";
+    color: #197254;
+    font-weight: 800;
+}
+
+.bottom span {
+    content: "\A0";
+    border-right: 2px solid;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .profile-container {
+        margin: 50px auto 0 auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    .terminal-container {
+        flex-grow: 1;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .profile-container {
+        margin: 50px auto 0 auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    .terminal-container {
+        flex-grow: 1;
+        margin: 0;
+    }
+}
